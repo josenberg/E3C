@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+        <link href='{% static "css/app.css" %}' rel="stylesheet" />
+        <link href='{% static "css/style.css" %}' rel="stylesheet" />
+        <script src='{% static "js/jquery.min.js" %}'></script>
+        <script src='{% static "js/tether.min.js" %}'></script>
+        <script src='{% static "js/bootstrap.min.js" %}'></script>
+        <script src='{% static "js/Chart.min.js" %}'></script>
+        <link rel="stylesheet" href='{% static "font-awesome/css/font-awesome.css" %}'>
+    {% block scripts %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=''><span class="text-warning">E3C </span><span class="text-warning">v0.1</span></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href=''>Home</a></li>
+                    <li><a href=''>Docentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
